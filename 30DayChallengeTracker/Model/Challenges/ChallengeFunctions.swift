@@ -19,13 +19,8 @@ class ChallengeFunctions{
     
     static func readCurrentChallenge(completion: @escaping () -> ()){
         DispatchQueue.global(qos: .userInteractive).async {
-            if Data.currentChallenge.count == 0{
-                var date = DateComponents()
-                date.year = 2019
-                date.month = 12
-                date.day = 9
-                Data.currentChallenge.append(ChallengeModel(title: "Drink Water", challengeType: "Binary", startDate: date))
-            }
+
+            Data.currentChallenge = ChallengeModel(title: "Drink Water", challengeType: "Binary", startDate: Date())
             
             DispatchQueue.main.async {
                 completion()

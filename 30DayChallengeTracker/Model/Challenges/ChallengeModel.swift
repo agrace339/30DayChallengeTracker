@@ -12,9 +12,9 @@ class ChallengeModel{
     var id: String!
     var title: String!
     var challengeType: String!
-    var startDate: DateComponents!
+    var startDate: Date!
     
-    init(title: String, challengeType: String, startDate: DateComponents){
+    init(title: String, challengeType: String, startDate: Date){
         id = UUID().uuidString
         self.title = title
         self.challengeType = challengeType

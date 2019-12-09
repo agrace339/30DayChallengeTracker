@@ -9,7 +9,27 @@
 import UIKit
 
 class ChallengeViewController: UIViewController {
-
+    
+    @IBOutlet var TitleTextField: UITextField!
+    
+    @IBOutlet var InputView: UIView!
+    
+    @IBOutlet var TypeSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet var StartDatePicker: UIDatePicker!
+    
+    @IBAction func StartButton(_ sender: Any) {
+        //Save to currentChallenge
+        Data.currentChallenge.title = TitleTextField.text
+        print(Data.currentChallenge.title!)
+        Data.currentChallenge.challengeType = TypeSegmentedControl.titleForSegment(at: TypeSegmentedControl.selectedSegmentIndex)
+        print(Data.currentChallenge.challengeType!)
+        Data.currentChallenge.startDate = StartDatePicker.date
+        print(Data.currentChallenge.startDate!)
+        
+        InputView.removeFromSuperview()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

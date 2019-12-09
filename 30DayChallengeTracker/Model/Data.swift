@@ -8,7 +8,7 @@
 
 import Foundation
 class Data {
-    static var currentChallenge = [ChallengeModel]()
+    static var currentChallenge = ChallengeModel(title: "Challenge", challengeType: "type", startDate: Date())
     static var archivedChallenges = [ChallengeModel]()
     
     
