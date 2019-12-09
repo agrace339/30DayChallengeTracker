@@ -19,6 +19,7 @@
 		A0399AC2239EBF6E001D3707 /* ChallengeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0399AC1239EBF6E001D3707 /* ChallengeViewController.storyboard */; };
 		A0399AC8239EC216001D3707 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0399AC7239EC216001D3707 /* Data.swift */; };
 		A0399ACA239EC85B001D3707 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0399AC9239EC85B001D3707 /* ChallengeViewController.swift */; };
+		A07D0081239ECDD80033F96A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07D0080239ECDD80033F96A /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A0399AC1239EBF6E001D3707 /* ChallengeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChallengeViewController.storyboard; sourceTree = "<group>"; };
 		A0399AC7239EC216001D3707 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A0399AC9239EC85B001D3707 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		A07D0080239ECDD80033F96A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				A0399AC3239EBF7C001D3707 /* Views */,
 				A037ADF2239D5DCA0042EC7A /* Model */,
 				A0131271239C04B400D1E41F /* AppDelegate.swift */,
+				A07D0080239ECDD80033F96A /* SceneDelegate.swift */,
 				A013127A239C04B700D1E41F /* Assets.xcassets */,
 				A0399ABF239EB6E9001D3707 /* Colors.xcassets */,
 				A013127F239C04B700D1E41F /* LaunchScreen.storyboard */,
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0131277239C04B400D1E41F /* _0DayChallengeTracker.xcdatamodeld in Sources */,
+				A07D0081239ECDD80033F96A /* SceneDelegate.swift in Sources */,
 				A0131272239C04B400D1E41F /* AppDelegate.swift in Sources */,
 				A0399ACA239EC85B001D3707 /* ChallengeViewController.swift in Sources */,
 				A037ADF5239D5E090042EC7A /* ChallengeModel.swift in Sources */,
