@@ -8,24 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		A0131272239C04B400D1E41F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0131271239C04B400D1E41F /* AppDelegate.swift */; };
-		A0131274239C04B400D1E41F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0131273239C04B400D1E41F /* SceneDelegate.swift */; };
 		A0131277239C04B400D1E41F /* _0DayChallengeTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0131275239C04B400D1E41F /* _0DayChallengeTracker.xcdatamodeld */; };
-		A0131279239C04B400D1E41F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0131278239C04B400D1E41F /* ContentView.swift */; };
 		A013127B239C04B700D1E41F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A013127A239C04B700D1E41F /* Assets.xcassets */; };
 		A013127E239C04B700D1E41F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A013127D239C04B700D1E41F /* Preview Assets.xcassets */; };
 		A0131281239C04B700D1E41F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A013127F239C04B700D1E41F /* LaunchScreen.storyboard */; };
+		A013128A239C08DE00D1E41F /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = A0131289239C08DE00D1E41F /* fonts */; };
+		A037ADF5239D5E090042EC7A /* ChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037ADF4239D5E090042EC7A /* ChallengeModel.swift */; };
+		A037ADF7239D5E1D0042EC7A /* ChallengeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */; };
+		A0399AC0239EB6E9001D3707 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0399ABF239EB6E9001D3707 /* Colors.xcassets */; };
+		A0399AC2239EBF6E001D3707 /* ChallengeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0399AC1239EBF6E001D3707 /* ChallengeViewController.storyboard */; };
+		A0399AC8239EC216001D3707 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0399AC7239EC216001D3707 /* Data.swift */; };
+		A0399ACA239EC85B001D3707 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0399AC9239EC85B001D3707 /* ChallengeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A013126E239C04B400D1E41F /* 30DayChallengeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 30DayChallengeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0131271239C04B400D1E41F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0131273239C04B400D1E41F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A0131276239C04B400D1E41F /* _0DayChallengeTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _0DayChallengeTracker.xcdatamodel; sourceTree = "<group>"; };
-		A0131278239C04B400D1E41F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A013127A239C04B700D1E41F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A013127D239C04B700D1E41F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0131280239C04B700D1E41F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0131282239C04B700D1E41F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0131289239C08DE00D1E41F /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		A037ADF4239D5E090042EC7A /* ChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeModel.swift; sourceTree = "<group>"; };
+		A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeFunctions.swift; sourceTree = "<group>"; };
+		A0399ABF239EB6E9001D3707 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A0399AC1239EBF6E001D3707 /* ChallengeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChallengeViewController.storyboard; sourceTree = "<group>"; };
+		A0399AC7239EC216001D3707 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A0399AC9239EC85B001D3707 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,15 @@
 		A0131270239C04B400D1E41F /* 30DayChallengeTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A0399AC3239EBF7C001D3707 /* Views */,
+				A037ADF2239D5DCA0042EC7A /* Model */,
 				A0131271239C04B400D1E41F /* AppDelegate.swift */,
-				A0131273239C04B400D1E41F /* SceneDelegate.swift */,
-				A0131278239C04B400D1E41F /* ContentView.swift */,
 				A013127A239C04B700D1E41F /* Assets.xcassets */,
+				A0399ABF239EB6E9001D3707 /* Colors.xcassets */,
 				A013127F239C04B700D1E41F /* LaunchScreen.storyboard */,
 				A0131282239C04B700D1E41F /* Info.plist */,
 				A0131275239C04B400D1E41F /* _0DayChallengeTracker.xcdatamodeld */,
+				A0131289239C08DE00D1E41F /* fonts */,
 				A013127C239C04B700D1E41F /* Preview Content */,
 			);
 			path = 30DayChallengeTracker;
@@ -76,6 +88,41 @@
 				A013127D239C04B700D1E41F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A037ADF2239D5DCA0042EC7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0399AC7239EC216001D3707 /* Data.swift */,
+				A037ADF3239D5DF70042EC7A /* Challenges */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A037ADF3239D5DF70042EC7A /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				A037ADF4239D5E090042EC7A /* ChallengeModel.swift */,
+				A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */,
+			);
+			path = Challenges;
+			sourceTree = "<group>";
+		};
+		A0399AC3239EBF7C001D3707 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0399AC4239EBF8B001D3707 /* Challenge Page View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A0399AC4239EBF8B001D3707 /* Challenge Page View */ = {
+			isa = PBXGroup;
+			children = (
+				A0399AC1239EBF6E001D3707 /* ChallengeViewController.storyboard */,
+				A0399AC9239EC85B001D3707 /* ChallengeViewController.swift */,
+			);
+			path = "Challenge Page View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +183,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0399AC0239EB6E9001D3707 /* Colors.xcassets in Resources */,
 				A0131281239C04B700D1E41F /* LaunchScreen.storyboard in Resources */,
 				A013127E239C04B700D1E41F /* Preview Assets.xcassets in Resources */,
 				A013127B239C04B700D1E41F /* Assets.xcassets in Resources */,
+				A013128A239C08DE00D1E41F /* fonts in Resources */,
+				A0399AC2239EBF6E001D3707 /* ChallengeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +201,10 @@
 			files = (
 				A0131277239C04B400D1E41F /* _0DayChallengeTracker.xcdatamodeld in Sources */,
 				A0131272239C04B400D1E41F /* AppDelegate.swift in Sources */,
-				A0131279239C04B400D1E41F /* ContentView.swift in Sources */,
-				A0131274239C04B400D1E41F /* SceneDelegate.swift in Sources */,
+				A0399ACA239EC85B001D3707 /* ChallengeViewController.swift in Sources */,
+				A037ADF5239D5E090042EC7A /* ChallengeModel.swift in Sources */,
+				A037ADF7239D5E1D0042EC7A /* ChallengeFunctions.swift in Sources */,
+				A0399AC8239EC216001D3707 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
