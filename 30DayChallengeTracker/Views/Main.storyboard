@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -32,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-KS-fNu">
-                                        <rect key="frame" x="148.5" y="52" width="78" height="34"/>
+                                        <rect key="frame" x="144.5" y="46.5" width="86" height="39.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -49,13 +48,13 @@
                                 <rect key="frame" x="0.0" y="121" width="375" height="356"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Your Next Challenge!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-6j-jEc">
-                                        <rect key="frame" x="15" y="15" width="345" height="28"/>
+                                        <rect key="frame" x="15" y="15" width="345" height="33"/>
                                         <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="24"/>
                                         <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8W-PP-ewp">
-                                        <rect key="frame" x="20" y="301" width="335" height="40"/>
+                                        <rect key="frame" x="20" y="296" width="335" height="45"/>
                                         <color key="backgroundColor" name="RedColor"/>
                                         <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="24"/>
                                         <state key="normal" title="Start">
@@ -66,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Su4-DA-nEM">
-                                        <rect key="frame" x="40" y="63" width="295" height="218"/>
+                                        <rect key="frame" x="40" y="68" width="295" height="208"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVw-Hf-BLn">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="34"/>
@@ -97,10 +96,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CTZ-SS-GY8">
-                                                <rect key="frame" x="0.0" y="64" width="295" height="154"/>
+                                                <rect key="frame" x="0.0" y="64" width="295" height="144"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0e-zp-a6k">
-                                                        <rect key="frame" x="0.0" y="67" width="50" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="62" width="50" height="20.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="pVJ-wS-mjw"/>
                                                         </constraints>
@@ -109,7 +108,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qFz-S2-ojF">
-                                                        <rect key="frame" x="50" y="0.0" width="245" height="154"/>
+                                                        <rect key="frame" x="50" y="0.0" width="245" height="144"/>
                                                     </datePicker>
                                                 </subviews>
                                             </stackView>
@@ -138,7 +137,7 @@
                                 <rect key="frame" x="0.0" y="497" width="375" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archived Challenges" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD7-31-N0R">
-                                        <rect key="frame" x="20" y="15" width="220" height="33"/>
+                                        <rect key="frame" x="20" y="15" width="234" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="wyt-sq-QJM"/>
                                         </constraints>
@@ -166,7 +165,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="AppBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="L9T-Xl-i5A" firstAttribute="top" secondItem="U6z-OU-j83" secondAttribute="top" id="1Fn-g2-Wtw"/>
                             <constraint firstItem="Ah8-ff-g33" firstAttribute="leading" secondItem="jlC-FY-W4h" secondAttribute="leading" id="E8P-cj-cOO"/>
@@ -221,7 +220,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="AppBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="7Sz-eX-Wz0" secondAttribute="trailing" id="6ij-4J-bUd"/>
                             <constraint firstItem="7Sz-eX-Wz0" firstAttribute="top" secondItem="pgm-7b-ggg" secondAttribute="top" id="mse-vg-pMa"/>
@@ -262,26 +261,6 @@
                                     <constraint firstItem="DuJ-NI-KIk" firstAttribute="centerX" secondItem="TbQ-Iv-Ix4" secondAttribute="centerX" id="wCV-TU-D5H"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NNz-d0-Pbh">
-                                <rect key="frame" x="15" y="116" width="345" height="451"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vLl-Xo-7Me">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Tj6-EX-lmp">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2Vd-wr-8tM">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/30 Days Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owJ-Ux-Fgo">
                                 <rect key="frame" x="15" y="582" width="345" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -289,15 +268,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="alternatingContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="AppBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NNz-d0-Pbh" firstAttribute="top" secondItem="TbQ-Iv-Ix4" secondAttribute="bottom" constant="15" id="8P8-kw-zbH"/>
                             <constraint firstItem="TbQ-Iv-Ix4" firstAttribute="top" secondItem="PNC-EL-efJ" secondAttribute="top" id="CdZ-X4-kVg"/>
-                            <constraint firstItem="NNz-d0-Pbh" firstAttribute="leading" secondItem="PNC-EL-efJ" secondAttribute="leading" constant="15" id="CyM-O0-ZB1"/>
                             <constraint firstItem="PNC-EL-efJ" firstAttribute="bottom" secondItem="owJ-Ux-Fgo" secondAttribute="bottom" constant="15" id="Gsk-SX-uGl"/>
                             <constraint firstItem="TbQ-Iv-Ix4" firstAttribute="trailing" secondItem="PNC-EL-efJ" secondAttribute="trailing" id="Jh7-mI-i9e"/>
-                            <constraint firstItem="PNC-EL-efJ" firstAttribute="trailing" secondItem="NNz-d0-Pbh" secondAttribute="trailing" constant="15" id="Ohz-Wc-j8T"/>
-                            <constraint firstItem="owJ-Ux-Fgo" firstAttribute="top" secondItem="NNz-d0-Pbh" secondAttribute="bottom" constant="15" id="Ugl-JE-tva"/>
                             <constraint firstItem="TbQ-Iv-Ix4" firstAttribute="leading" secondItem="PNC-EL-efJ" secondAttribute="leading" id="giI-Kf-Cnr"/>
                             <constraint firstItem="owJ-Ux-Fgo" firstAttribute="leading" secondItem="PNC-EL-efJ" secondAttribute="leading" constant="15" id="vJ3-QU-LVe"/>
                             <constraint firstItem="PNC-EL-efJ" firstAttribute="trailing" secondItem="owJ-Ux-Fgo" secondAttribute="trailing" constant="15" id="w9f-DX-3jV"/>
@@ -333,6 +308,9 @@
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="graph-icon" width="36" height="36"/>
         <image name="info.circle.fill" catalog="system" width="64" height="60"/>
+        <namedColor name="AppBackgroundColor">
+            <color red="0.95686274509803926" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ArchiveChallengeColor">
             <color red="0.9137254901960784" green="0.9137254901960784" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

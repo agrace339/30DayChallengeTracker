@@ -9,10 +9,23 @@
 import UIKit
 
 class ChallengeViewController: UIViewController {
-
+    
+    fileprivate let dayCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        
+        return cv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.addSubview(dayCollectionView)
+        dayCollectionView.backgroundColor = UIColor()
+        
         // Do any additional setup after loading the view.
     }
     
