@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChallengeViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBOutlet var TitleTextField: UITextField!
     
