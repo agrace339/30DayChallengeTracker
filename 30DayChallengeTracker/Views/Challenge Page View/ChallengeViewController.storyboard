@@ -54,7 +54,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8W-PP-ewp">
-                                        <rect key="frame" x="40" y="301" width="295" height="40"/>
+                                        <rect key="frame" x="20" y="301" width="335" height="40"/>
                                         <color key="backgroundColor" name="RedColor"/>
                                         <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="24"/>
                                         <state key="normal" title="Start">
@@ -121,14 +121,14 @@
                                 </subviews>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="X8W-PP-ewp" firstAttribute="leading" secondItem="G2B-jY-8Fn" secondAttribute="leading" constant="40" id="1Om-eM-JQc"/>
+                                    <constraint firstItem="X8W-PP-ewp" firstAttribute="leading" secondItem="G2B-jY-8Fn" secondAttribute="leading" constant="20" id="1Om-eM-JQc"/>
                                     <constraint firstItem="Su4-DA-nEM" firstAttribute="leading" secondItem="G2B-jY-8Fn" secondAttribute="leading" constant="40" id="1Pi-il-FBz"/>
                                     <constraint firstAttribute="trailing" secondItem="tHs-6j-jEc" secondAttribute="trailing" constant="15" id="D1I-ym-BSS"/>
                                     <constraint firstItem="Su4-DA-nEM" firstAttribute="top" secondItem="tHs-6j-jEc" secondAttribute="bottom" constant="20" id="HQn-CL-Bsh"/>
                                     <constraint firstAttribute="trailing" secondItem="Su4-DA-nEM" secondAttribute="trailing" constant="40" id="Tei-Rg-2gE"/>
                                     <constraint firstItem="tHs-6j-jEc" firstAttribute="top" secondItem="G2B-jY-8Fn" secondAttribute="top" constant="15" id="cVX-6x-nhD"/>
                                     <constraint firstAttribute="bottom" secondItem="X8W-PP-ewp" secondAttribute="bottom" constant="15" id="kip-IN-qUm"/>
-                                    <constraint firstAttribute="trailing" secondItem="X8W-PP-ewp" secondAttribute="trailing" constant="40" id="mbE-pG-5Fu"/>
+                                    <constraint firstAttribute="trailing" secondItem="X8W-PP-ewp" secondAttribute="trailing" constant="20" id="mbE-pG-5Fu"/>
                                     <constraint firstItem="X8W-PP-ewp" firstAttribute="top" secondItem="Su4-DA-nEM" secondAttribute="bottom" constant="20" id="oLE-2I-xHT"/>
                                     <constraint firstItem="tHs-6j-jEc" firstAttribute="leading" secondItem="G2B-jY-8Fn" secondAttribute="leading" constant="15" id="yTx-8P-ZxN"/>
                                 </constraints>
@@ -181,18 +181,72 @@
                         <viewLayoutGuide key="safeArea" id="jlC-FY-W4h"/>
                     </view>
                     <connections>
-                        <outlet property="InputView" destination="G2B-jY-8Fn" id="N5U-SN-Qiq"/>
+                        <outlet property="ArchivedChallenges" destination="DcC-Su-qia" id="uUH-kr-jYh"/>
+                        <outlet property="ChallengeInputView" destination="Su4-DA-nEM" id="4Rh-I7-4Ja"/>
+                        <outlet property="CurrChalSubtitle" destination="tHs-6j-jEc" id="XA0-Bm-f5R"/>
                         <outlet property="StartDatePicker" destination="qFz-S2-ojF" id="SD9-UH-O8z"/>
                         <outlet property="TitleTextField" destination="UVw-Hf-BLn" id="1zD-MB-ceU"/>
                         <outlet property="TypeSegmentedControl" destination="Iwq-OJ-jmr" id="fzg-3T-x9o"/>
+                        <outlet property="startButton" destination="X8W-PP-ewp" id="L19-1B-asQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2r5-Ih-ivs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="50.399999999999999" y="373.76311844077964"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="HH2-gG-bly">
+            <objects>
+                <viewController id="XFX-rm-Gzp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cn8-Bj-DQc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pgm-7b-ggg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="HNf-Aj-8hd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMB-9W-HrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791" y="707"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="Fn8-pL-wxz">
+            <objects>
+                <viewController id="pqA-a0-Vhy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yNj-FR-NHv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PNC-EL-efJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" selectedImage="calendar" catalog="system" id="biy-dP-FFr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdX-k3-nFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="41"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yyw-A0-v6b">
+            <objects>
+                <tabBarController id="bh1-ZN-BlL" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eqv-Ug-1HQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pqA-a0-Vhy" kind="relationship" relationship="viewControllers" id="eA7-9J-Vja"/>
+                        <segue destination="XFX-rm-Gzp" kind="relationship" relationship="viewControllers" id="g3P-VU-hTT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bc0-gz-1ll" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="374"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="info.circle.fill" catalog="system" width="64" height="60"/>
         <namedColor name="ArchiveChallengeColor">
             <color red="0.9137254901960784" green="0.9137254901960784" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

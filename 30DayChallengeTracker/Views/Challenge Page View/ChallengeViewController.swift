@@ -12,27 +12,45 @@ class ChallengeViewController: UIViewController {
     
     @IBOutlet var TitleTextField: UITextField!
     
-    @IBOutlet var InputView: UIView!
-    
+    @IBOutlet var CurrChalSubtitle: UILabel!
     @IBOutlet var TypeSegmentedControl: UISegmentedControl!
     
     @IBOutlet var StartDatePicker: UIDatePicker!
     
+    @IBOutlet var ChallengeInputView: UIStackView!
+    @IBOutlet var startButton: UIButton!
+    @IBOutlet var ArchivedChallenges: UILabel!
+    
     @IBAction func StartButton(_ sender: Any) {
-        //Save to currentChallenge
-        Data.currentChallenge.title = TitleTextField.text
-        print(Data.currentChallenge.title!)
-        Data.currentChallenge.challengeType = TypeSegmentedControl.titleForSegment(at: TypeSegmentedControl.selectedSegmentIndex)
-        print(Data.currentChallenge.challengeType!)
-        Data.currentChallenge.startDate = StartDatePicker.date
-        print(Data.currentChallenge.startDate!)
-        
-        InputView.removeFromSuperview()
+        if startButton.backgroundColor == UIColor(named: "RedColor"){
+            //Save to currentChallenge
+            Data.currentChallenge.title = TitleTextField.text
+            print(Data.currentChallenge.title!)
+            Data.currentChallenge.challengeType = TypeSegmentedControl.titleForSegment(at: TypeSegmentedControl.selectedSegmentIndex)
+            print(Data.currentChallenge.challengeType!)
+            Data.currentChallenge.startDate = StartDatePicker.date
+            print(Data.currentChallenge.startDate!)
+            
+            ChallengeInputView.removeFromSuperview()
+            
+            CurrChalSubtitle.text = "Current Challenge"
+            startButton.backgroundColor = UIColor(named: "BlueColor")
+            startButton.setTitle(Data.currentChallenge.title, for: .normal)
+            startButton.titleLabel?.font = UIFont(name: "OpenSans-ExtraBold", size: 40)
+            let top_constraint = startButton.topAnchor.constraint(equalTo: CurrChalSubtitle.bottomAnchor, constant: 15)
+            
+            NSLayoutConstraint.activate([top_constraint])
+        }
+        else{
+            
+        }
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        startButton.layer.cornerRadius = 20
+        ArchivedChallenges.layer.cornerRadius = 20
     }
     
 

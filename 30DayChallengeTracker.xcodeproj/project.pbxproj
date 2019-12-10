@@ -12,7 +12,6 @@
 		A013127B239C04B700D1E41F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A013127A239C04B700D1E41F /* Assets.xcassets */; };
 		A013127E239C04B700D1E41F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A013127D239C04B700D1E41F /* Preview Assets.xcassets */; };
 		A0131281239C04B700D1E41F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A013127F239C04B700D1E41F /* LaunchScreen.storyboard */; };
-		A013128A239C08DE00D1E41F /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = A0131289239C08DE00D1E41F /* fonts */; };
 		A037ADF5239D5E090042EC7A /* ChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037ADF4239D5E090042EC7A /* ChallengeModel.swift */; };
 		A037ADF7239D5E1D0042EC7A /* ChallengeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */; };
 		A0399AC0239EB6E9001D3707 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0399ABF239EB6E9001D3707 /* Colors.xcassets */; };
@@ -20,6 +19,10 @@
 		A0399AC8239EC216001D3707 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0399AC7239EC216001D3707 /* Data.swift */; };
 		A0399ACA239EC85B001D3707 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0399AC9239EC85B001D3707 /* ChallengeViewController.swift */; };
 		A07D0081239ECDD80033F96A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07D0080239ECDD80033F96A /* SceneDelegate.swift */; };
+		A089495E23A01E03005A8E46 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A089495A23A01E03005A8E46 /* OpenSans-SemiBold.ttf */; };
+		A089495F23A01E03005A8E46 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A089495B23A01E03005A8E46 /* OpenSans-Regular.ttf */; };
+		A089496023A01E03005A8E46 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A089495C23A01E03005A8E46 /* OpenSans-ExtraBold.ttf */; };
+		A089496123A01E03005A8E46 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A089495D23A01E03005A8E46 /* OpenSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +33,6 @@
 		A013127D239C04B700D1E41F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0131280239C04B700D1E41F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0131282239C04B700D1E41F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0131289239C08DE00D1E41F /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		A037ADF4239D5E090042EC7A /* ChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeModel.swift; sourceTree = "<group>"; };
 		A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeFunctions.swift; sourceTree = "<group>"; };
 		A0399ABF239EB6E9001D3707 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -38,6 +40,10 @@
 		A0399AC7239EC216001D3707 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A0399AC9239EC85B001D3707 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		A07D0080239ECDD80033F96A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A089495A23A01E03005A8E46 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		A089495B23A01E03005A8E46 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		A089495C23A01E03005A8E46 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A089495D23A01E03005A8E46 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +80,10 @@
 				A037ADF2239D5DCA0042EC7A /* Model */,
 				A0131271239C04B400D1E41F /* AppDelegate.swift */,
 				A07D0080239ECDD80033F96A /* SceneDelegate.swift */,
-				A013127A239C04B700D1E41F /* Assets.xcassets */,
-				A0399ABF239EB6E9001D3707 /* Colors.xcassets */,
+				A089498723A0279D005A8E46 /* Theme */,
 				A013127F239C04B700D1E41F /* LaunchScreen.storyboard */,
 				A0131282239C04B700D1E41F /* Info.plist */,
 				A0131275239C04B400D1E41F /* _0DayChallengeTracker.xcdatamodeld */,
-				A0131289239C08DE00D1E41F /* fonts */,
 				A013127C239C04B700D1E41F /* Preview Content */,
 			);
 			path = 30DayChallengeTracker;
@@ -126,6 +130,27 @@
 				A0399AC9239EC85B001D3707 /* ChallengeViewController.swift */,
 			);
 			path = "Challenge Page View";
+			sourceTree = "<group>";
+		};
+		A089495923A01DF8005A8E46 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A089495D23A01E03005A8E46 /* OpenSans-Bold.ttf */,
+				A089495C23A01E03005A8E46 /* OpenSans-ExtraBold.ttf */,
+				A089495B23A01E03005A8E46 /* OpenSans-Regular.ttf */,
+				A089495A23A01E03005A8E46 /* OpenSans-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		A089498723A0279D005A8E46 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				A013127A239C04B700D1E41F /* Assets.xcassets */,
+				A0399ABF239EB6E9001D3707 /* Colors.xcassets */,
+				A089495923A01DF8005A8E46 /* fonts */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +213,12 @@
 			files = (
 				A0399AC0239EB6E9001D3707 /* Colors.xcassets in Resources */,
 				A0131281239C04B700D1E41F /* LaunchScreen.storyboard in Resources */,
+				A089496023A01E03005A8E46 /* OpenSans-ExtraBold.ttf in Resources */,
+				A089495E23A01E03005A8E46 /* OpenSans-SemiBold.ttf in Resources */,
 				A013127E239C04B700D1E41F /* Preview Assets.xcassets in Resources */,
 				A013127B239C04B700D1E41F /* Assets.xcassets in Resources */,
-				A013128A239C08DE00D1E41F /* fonts in Resources */,
+				A089495F23A01E03005A8E46 /* OpenSans-Regular.ttf in Resources */,
+				A089496123A01E03005A8E46 /* OpenSans-Bold.ttf in Resources */,
 				A0399AC2239EBF6E001D3707 /* ChallengeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
