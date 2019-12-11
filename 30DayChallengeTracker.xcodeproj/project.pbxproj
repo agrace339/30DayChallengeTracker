@@ -12,6 +12,8 @@
 		A013127B239C04B700D1E41F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A013127A239C04B700D1E41F /* Assets.xcassets */; };
 		A013127E239C04B700D1E41F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A013127D239C04B700D1E41F /* Preview Assets.xcassets */; };
 		A0131281239C04B700D1E41F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A013127F239C04B700D1E41F /* LaunchScreen.storyboard */; };
+		A01683A823A13DC000E0F65E /* EffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01683A723A13DC000E0F65E /* EffectsViewController.swift */; };
+		A01683AA23A143E400E0F65E /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01683A923A143E400E0F65E /* DayModel.swift */; };
 		A037ADF5239D5E090042EC7A /* ChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037ADF4239D5E090042EC7A /* ChallengeModel.swift */; };
 		A037ADF7239D5E1D0042EC7A /* ChallengeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */; };
 		A039328423A0391A00E8B42B /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039328323A0391A00E8B42B /* ChallengeViewController.swift */; };
@@ -34,6 +36,8 @@
 		A013127D239C04B700D1E41F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0131280239C04B700D1E41F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0131282239C04B700D1E41F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A01683A723A13DC000E0F65E /* EffectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsViewController.swift; sourceTree = "<group>"; };
+		A01683A923A143E400E0F65E /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		A037ADF4239D5E090042EC7A /* ChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeModel.swift; sourceTree = "<group>"; };
 		A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeFunctions.swift; sourceTree = "<group>"; };
 		A039328323A0391A00E8B42B /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
@@ -101,22 +105,39 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A01683A623A13DA400E0F65E /* Effects View */ = {
+			isa = PBXGroup;
+			children = (
+				A01683A723A13DC000E0F65E /* EffectsViewController.swift */,
+			);
+			path = "Effects View";
+			sourceTree = "<group>";
+		};
+		A01683AB23A143F400E0F65E /* Challenge View */ = {
+			isa = PBXGroup;
+			children = (
+				A01683A923A143E400E0F65E /* DayModel.swift */,
+			);
+			path = "Challenge View";
+			sourceTree = "<group>";
+		};
 		A037ADF2239D5DCA0042EC7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A0399AC7239EC216001D3707 /* Data.swift */,
-				A037ADF3239D5DF70042EC7A /* Challenges */,
+				A01683AB23A143F400E0F65E /* Challenge View */,
+				A037ADF3239D5DF70042EC7A /* Home View */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A037ADF3239D5DF70042EC7A /* Challenges */ = {
+		A037ADF3239D5DF70042EC7A /* Home View */ = {
 			isa = PBXGroup;
 			children = (
 				A037ADF4239D5E090042EC7A /* ChallengeModel.swift */,
 				A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */,
 			);
-			path = Challenges;
+			path = "Home View";
 			sourceTree = "<group>";
 		};
 		A039328223A038E000E8B42B /* Challenge View */ = {
@@ -131,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				A0399AC1239EBF6E001D3707 /* Main.storyboard */,
+				A01683A623A13DA400E0F65E /* Effects View */,
 				A039328223A038E000E8B42B /* Challenge View */,
 				A0399AC4239EBF8B001D3707 /* Home View */,
 			);
@@ -235,11 +257,13 @@
 			files = (
 				A0131277239C04B400D1E41F /* _0DayChallengeTracker.xcdatamodeld in Sources */,
 				A07D0081239ECDD80033F96A /* SceneDelegate.swift in Sources */,
+				A01683A823A13DC000E0F65E /* EffectsViewController.swift in Sources */,
 				A039328423A0391A00E8B42B /* ChallengeViewController.swift in Sources */,
 				A0131272239C04B400D1E41F /* AppDelegate.swift in Sources */,
 				A0399ACA239EC85B001D3707 /* HomeViewController.swift in Sources */,
 				A037ADF5239D5E090042EC7A /* ChallengeModel.swift in Sources */,
 				A037ADF7239D5E1D0042EC7A /* ChallengeFunctions.swift in Sources */,
+				A01683AA23A143E400E0F65E /* DayModel.swift in Sources */,
 				A0399AC8239EC216001D3707 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,24 +20,33 @@ class ChallengeViewController: UIViewController {
         return cv
     }()
     
+    @IBOutlet var ChallengeName: UILabel!
+    @IBOutlet var HeaderView: UIView!
+    @IBOutlet var CountDaysLabel: UILabel!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ChallengeName.text = Data.currentChallenge.title
         view.addSubview(dayCollectionView)
-        dayCollectionView.backgroundColor = UIColor()
+        dayCollectionView.backgroundColor = UIColor.white
+        dayCollectionView.topAnchor.constraint(equalToSystemSpacingBelow: HeaderView.bottomAnchor, multiplier: 15).isActive = true
+        //dayCollectionView.bottomAnchor.constraint(equalToSystemSpacingBelow: CountDaysLabel.topAnchor, multiplier: -30).isActive = true
+        dayCollectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 15).isActive = true
+        dayCollectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -15).isActive = true
         
         // Do any additional setup after loading the view.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension UIViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
     }
-    */
-
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
 }

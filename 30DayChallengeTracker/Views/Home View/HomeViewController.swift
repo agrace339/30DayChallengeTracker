@@ -42,6 +42,9 @@ class HomeViewController: UIViewController {
             NSLayoutConstraint.activate([top_constraint])
         }
         else{
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let ChallengeViewController = storyBoard.instantiateViewController(withIdentifier: "ChallengeViewController")
+            self.present(ChallengeViewController, animated: true, completion: nil)
             
         }
 

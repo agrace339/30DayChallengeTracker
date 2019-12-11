@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="foR-0r-CHV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="foR-0r-CHV">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-KS-fNu">
-                                        <rect key="frame" x="144.5" y="46.5" width="86" height="39.5"/>
+                                        <rect key="frame" x="148.5" y="52" width="78" height="34"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,13 +48,13 @@
                                 <rect key="frame" x="0.0" y="121" width="375" height="356"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Your Next Challenge!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHs-6j-jEc">
-                                        <rect key="frame" x="15" y="15" width="345" height="33"/>
+                                        <rect key="frame" x="15" y="15" width="345" height="28"/>
                                         <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="24"/>
                                         <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8W-PP-ewp">
-                                        <rect key="frame" x="20" y="296" width="335" height="45"/>
+                                        <rect key="frame" x="20" y="301" width="335" height="40"/>
                                         <color key="backgroundColor" name="RedColor"/>
                                         <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="24"/>
                                         <state key="normal" title="Start">
@@ -65,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Su4-DA-nEM">
-                                        <rect key="frame" x="40" y="68" width="295" height="208"/>
+                                        <rect key="frame" x="40" y="63" width="295" height="218"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVw-Hf-BLn">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="34"/>
@@ -96,10 +96,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CTZ-SS-GY8">
-                                                <rect key="frame" x="0.0" y="64" width="295" height="144"/>
+                                                <rect key="frame" x="0.0" y="64" width="295" height="154"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0e-zp-a6k">
-                                                        <rect key="frame" x="0.0" y="62" width="50" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="67" width="50" height="20.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="pVJ-wS-mjw"/>
                                                         </constraints>
@@ -108,7 +108,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qFz-S2-ojF">
-                                                        <rect key="frame" x="50" y="0.0" width="245" height="144"/>
+                                                        <rect key="frame" x="50" y="0.0" width="245" height="154"/>
                                                     </datePicker>
                                                 </subviews>
                                             </stackView>
@@ -137,7 +137,7 @@
                                 <rect key="frame" x="0.0" y="497" width="375" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archived Challenges" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD7-31-N0R">
-                                        <rect key="frame" x="20" y="15" width="234" height="33"/>
+                                        <rect key="frame" x="20" y="15" width="220" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="wyt-sq-QJM"/>
                                         </constraints>
@@ -206,7 +206,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCg-Me-2e1">
-                                        <rect key="frame" x="69" y="46" width="237" height="40"/>
+                                        <rect key="frame" x="80.5" y="52" width="214.5" height="34"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -239,7 +239,7 @@
         <!--Challenge View-->
         <scene sceneID="Fn8-pL-wxz">
             <objects>
-                <viewController id="pqA-a0-Vhy" sceneMemberID="viewController">
+                <viewController id="pqA-a0-Vhy" customClass="ChallengeViewController" customModule="_0DayChallengeTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yNj-FR-NHv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,11 +248,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuJ-NI-KIk">
-                                        <rect key="frame" x="69" y="46" width="237" height="40"/>
+                                        <rect key="frame" x="80.5" y="52" width="214.5" height="34"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWo-YW-J14">
+                                        <rect key="frame" x="16" y="56" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="selectedMenuItemTextColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
@@ -280,6 +284,11 @@
                         <viewLayoutGuide key="safeArea" id="PNC-EL-efJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Challenge View" selectedImage="calendar" catalog="system" id="biy-dP-FFr"/>
+                    <connections>
+                        <outlet property="ChallengeName" destination="DuJ-NI-KIk" id="TqK-Pe-OMg"/>
+                        <outlet property="CountDaysLabel" destination="owJ-Ux-Fgo" id="kxG-S3-jsB"/>
+                        <outlet property="HeaderView" destination="TbQ-Iv-Ix4" id="cEf-uU-Itj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdX-k3-nFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,7 +297,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yyw-A0-v6b">
             <objects>
-                <tabBarController id="bh1-ZN-BlL" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ChallengeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bh1-ZN-BlL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FSd-xT-8AR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eqv-Ug-1HQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
