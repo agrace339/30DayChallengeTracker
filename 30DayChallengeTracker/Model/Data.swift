@@ -9,6 +9,8 @@
 import Foundation
 class Data {
     static var currentChallenge = ChallengeModel(title: "Challenge", challengeType: "type", startDate: Date())
+    static var currentDays = [DayModel]()
     static var archivedChallenges = [ChallengeModel]()
     
+
 }

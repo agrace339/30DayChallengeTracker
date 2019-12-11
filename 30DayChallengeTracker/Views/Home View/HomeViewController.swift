@@ -40,6 +40,12 @@ class HomeViewController: UIViewController {
             let top_constraint = startButton.topAnchor.constraint(equalTo: CurrChalSubtitle.bottomAnchor, constant: 15)
             
             NSLayoutConstraint.activate([top_constraint])
+            var date = Data.currentChallenge.startDate
+            for _ in 0...29{
+                date = date!.addingTimeInterval(60.0 * 60.0 * 24.0)
+                Data.currentDays.append(DayModel(date: date!, complete: false))
+            }
+            
         }
         else{
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

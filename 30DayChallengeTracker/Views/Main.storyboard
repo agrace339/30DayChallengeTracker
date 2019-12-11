@@ -287,7 +287,6 @@
                     <connections>
                         <outlet property="ChallengeName" destination="DuJ-NI-KIk" id="TqK-Pe-OMg"/>
                         <outlet property="CountDaysLabel" destination="owJ-Ux-Fgo" id="kxG-S3-jsB"/>
-                        <outlet property="HeaderView" destination="TbQ-Iv-Ix4" id="cEf-uU-Itj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdX-k3-nFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

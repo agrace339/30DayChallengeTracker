@@ -9,12 +9,16 @@
 import Foundation
 class DayModel{
     var date: Date!
-    var position: Int!
+    var dateString: String!
     var complete: Bool!
     
-    init(date: Date, position: Int, complete: Bool){
+    init(date: Date, complete: Bool){
         self.date = date
-        self.position = position
+        
+        let format = DateFormatter()
+        format.dateFormat = "MM/dd"
+        dateString = format.string(from: date)
+        
         self.complete = complete
     }
 
