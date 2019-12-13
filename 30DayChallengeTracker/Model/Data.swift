@@ -9,8 +9,9 @@
 import Foundation
 class Data {
     static var currentChallenge = ChallengeModel(title: "Challenge", challengeType: "type", startDate: Date())
+    static var completedDays: Int = 0
     static var currentDays = [DayModel]()
     static var archivedChallenges = [ChallengeModel]()
-    
+    static var currentEffects = [EffectsModel]()
 
 }

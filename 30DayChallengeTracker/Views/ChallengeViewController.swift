@@ -8,18 +8,28 @@
 
 import UIKit
 
-class ChallengeViewController: UIViewController {
+protocol CounterDelegate{
+    func requestReload(counter:Int)
+}
+
+class ChallengeViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
+    func requestReload(counter:Int) {
+        Data.completedDays = counter
+        CountDaysLabel.text = String(counter)
+        CountDaysLabel.setNeedsDisplay()
+    }
     
     fileprivate let dayCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.register(DayCell.self, forCellWithReuseIdentifier: "cell")
+        cv.register(DayCell.self, forCellWithReuseIdentifier: "day")
         
         return cv
     }()
-    
+
     @IBOutlet var ChallengeName: UILabel!
     @IBOutlet var CountDaysLabel: UILabel!
     
@@ -27,7 +37,7 @@ class ChallengeViewController: UIViewController {
         super.viewDidLoad()
         ChallengeName.text = Data.currentChallenge.title
         view.addSubview(dayCollectionView)
-        dayCollectionView.backgroundColor = UIColor.white
+        dayCollectionView.backgroundColor = UIColor(named: "AppBackgroundColor")
         dayCollectionView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 116).isActive = true
         dayCollectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 15).isActive = true
         dayCollectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -15).isActive = true
@@ -35,13 +45,13 @@ class ChallengeViewController: UIViewController {
         
         dayCollectionView.delegate = self
         dayCollectionView.dataSource = self
-        // Do any additional setup after loading the view.
+        
+        
+        CountDaysLabel.text = String(Data.completedDays) + "/30 Days Complete!"
     }
-}
 
-extension UIViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 200)
+        return CGSize(width: 65, height: 65)
     }
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print(Data.currentDays.count)
@@ -50,9 +60,9 @@ extension UIViewController: UICollectionViewDelegateFlowLayout, UICollectionView
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let dayModel = Data.currentDays[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! DayCell
-        //cell.date.text = dayModel.dateString!
-        print(cell.date.text!)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "day", for: indexPath) as! DayCell
+        cell.date.text = dayModel.dateString!
+        
         if dayModel.complete == true{
             cell.backgroundColor = UIColor(named: "BlueColor")
             cell.date.textColor = UIColor(named: "BackgroundColor")
@@ -61,17 +71,34 @@ extension UIViewController: UICollectionViewDelegateFlowLayout, UICollectionView
             cell.backgroundColor = UIColor(named: "BackgroundColor")
             cell.date.textColor = UIColor(named: "TextColor")
         }
-        
+        cell.layer.cornerRadius = 10
         return cell
     }
     
-    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! DayCell
+        if cell.backgroundColor == UIColor(named: "BackgroundColor"){
+            cell.backgroundColor = UIColor(named: "BlueColor")
+            cell.date.textColor = UIColor(named: "BackgroundColor")
+            Data.currentDays[indexPath.row].complete = true
+            Data.completedDays += 1
+            CountDaysLabel.text = String(Data.completedDays) + "/30 Days Complete!"
+        }
+        
+        else{
+            cell.backgroundColor = UIColor(named: "BackgroundColor")
+            cell.date.textColor = UIColor(named: "TextColor")
+            Data.currentDays[indexPath.row].complete = false
+            Data.completedDays -= 1
+            CountDaysLabel.text = String(Data.completedDays) + "/30 Days Complete!"
+        }
+    }
 }
 
 class DayCell: UICollectionViewCell{
     let date: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "OpenSans-Regular", size: 9)
+        label.font = UIFont(name: "OpenSans-Regular", size: 14)
         label.textAlignment = .center
         label.text = "hello"
         return label
@@ -79,13 +106,14 @@ class DayCell: UICollectionViewCell{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        date.translatesAutoresizingMaskIntoConstraints = false
+        
         contentView.addSubview(date)
-        
-        date.topAnchor.constraint(equalTo : contentView.topAnchor, constant: 0).isActive = true
-        date.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
-        date.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
-        date.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
-        
+        date.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 0).isActive = true
+        date.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 0).isActive = true
+        date.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0).isActive = true
+        date.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 0).isActive = true
+        contentView.layer.cornerRadius = 10
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = CGColor(srgbRed: 0.929, green: 0.145, blue: 0.306, alpha: 1)
     }

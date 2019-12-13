@@ -15,12 +15,13 @@
 		A01683A823A13DC000E0F65E /* EffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01683A723A13DC000E0F65E /* EffectsViewController.swift */; };
 		A01683AA23A143E400E0F65E /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01683A923A143E400E0F65E /* DayModel.swift */; };
 		A037ADF5239D5E090042EC7A /* ChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037ADF4239D5E090042EC7A /* ChallengeModel.swift */; };
-		A037ADF7239D5E1D0042EC7A /* ChallengeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */; };
 		A039328423A0391A00E8B42B /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039328323A0391A00E8B42B /* ChallengeViewController.swift */; };
 		A0399AC0239EB6E9001D3707 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0399ABF239EB6E9001D3707 /* Colors.xcassets */; };
 		A0399AC2239EBF6E001D3707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0399AC1239EBF6E001D3707 /* Main.storyboard */; };
 		A0399AC8239EC216001D3707 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0399AC7239EC216001D3707 /* Data.swift */; };
 		A0399ACA239EC85B001D3707 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0399AC9239EC85B001D3707 /* HomeViewController.swift */; };
+		A03D240223A2D96800B0EA92 /* EffectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D240123A2D96800B0EA92 /* EffectsModel.swift */; };
+		A03D240423A3EF8F00B0EA92 /* AddEffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D240323A3EF8F00B0EA92 /* AddEffectsViewController.swift */; };
 		A07D0081239ECDD80033F96A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07D0080239ECDD80033F96A /* SceneDelegate.swift */; };
 		A089495E23A01E03005A8E46 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A089495A23A01E03005A8E46 /* OpenSans-SemiBold.ttf */; };
 		A089495F23A01E03005A8E46 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A089495B23A01E03005A8E46 /* OpenSans-Regular.ttf */; };
@@ -39,12 +40,13 @@
 		A01683A723A13DC000E0F65E /* EffectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsViewController.swift; sourceTree = "<group>"; };
 		A01683A923A143E400E0F65E /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		A037ADF4239D5E090042EC7A /* ChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeModel.swift; sourceTree = "<group>"; };
-		A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeFunctions.swift; sourceTree = "<group>"; };
 		A039328323A0391A00E8B42B /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		A0399ABF239EB6E9001D3707 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A0399AC1239EBF6E001D3707 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A0399AC7239EC216001D3707 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A0399AC9239EC85B001D3707 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A03D240123A2D96800B0EA92 /* EffectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsModel.swift; sourceTree = "<group>"; };
+		A03D240323A3EF8F00B0EA92 /* AddEffectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEffectsViewController.swift; sourceTree = "<group>"; };
 		A07D0080239ECDD80033F96A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A089495A23A01E03005A8E46 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		A089495B23A01E03005A8E46 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -105,66 +107,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		A01683A623A13DA400E0F65E /* Effects View */ = {
-			isa = PBXGroup;
-			children = (
-				A01683A723A13DC000E0F65E /* EffectsViewController.swift */,
-			);
-			path = "Effects View";
-			sourceTree = "<group>";
-		};
-		A01683AB23A143F400E0F65E /* Challenge View */ = {
-			isa = PBXGroup;
-			children = (
-				A01683A923A143E400E0F65E /* DayModel.swift */,
-			);
-			path = "Challenge View";
-			sourceTree = "<group>";
-		};
 		A037ADF2239D5DCA0042EC7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A0399AC7239EC216001D3707 /* Data.swift */,
-				A01683AB23A143F400E0F65E /* Challenge View */,
-				A037ADF3239D5DF70042EC7A /* Home View */,
+				A03D240123A2D96800B0EA92 /* EffectsModel.swift */,
+				A01683A923A143E400E0F65E /* DayModel.swift */,
+				A037ADF4239D5E090042EC7A /* ChallengeModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		A037ADF3239D5DF70042EC7A /* Home View */ = {
-			isa = PBXGroup;
-			children = (
-				A037ADF4239D5E090042EC7A /* ChallengeModel.swift */,
-				A037ADF6239D5E1D0042EC7A /* ChallengeFunctions.swift */,
-			);
-			path = "Home View";
-			sourceTree = "<group>";
-		};
-		A039328223A038E000E8B42B /* Challenge View */ = {
-			isa = PBXGroup;
-			children = (
-				A039328323A0391A00E8B42B /* ChallengeViewController.swift */,
-			);
-			path = "Challenge View";
 			sourceTree = "<group>";
 		};
 		A0399AC3239EBF7C001D3707 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				A0399AC1239EBF6E001D3707 /* Main.storyboard */,
-				A01683A623A13DA400E0F65E /* Effects View */,
-				A039328223A038E000E8B42B /* Challenge View */,
-				A0399AC4239EBF8B001D3707 /* Home View */,
+				A01683A723A13DC000E0F65E /* EffectsViewController.swift */,
+				A039328323A0391A00E8B42B /* ChallengeViewController.swift */,
+				A0399AC9239EC85B001D3707 /* HomeViewController.swift */,
+				A03D240323A3EF8F00B0EA92 /* AddEffectsViewController.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		A0399AC4239EBF8B001D3707 /* Home View */ = {
-			isa = PBXGroup;
-			children = (
-				A0399AC9239EC85B001D3707 /* HomeViewController.swift */,
-			);
-			path = "Home View";
 			sourceTree = "<group>";
 		};
 		A089495923A01DF8005A8E46 /* fonts */ = {
@@ -262,8 +225,9 @@
 				A0131272239C04B400D1E41F /* AppDelegate.swift in Sources */,
 				A0399ACA239EC85B001D3707 /* HomeViewController.swift in Sources */,
 				A037ADF5239D5E090042EC7A /* ChallengeModel.swift in Sources */,
-				A037ADF7239D5E1D0042EC7A /* ChallengeFunctions.swift in Sources */,
+				A03D240423A3EF8F00B0EA92 /* AddEffectsViewController.swift in Sources */,
 				A01683AA23A143E400E0F65E /* DayModel.swift in Sources */,
+				A03D240223A2D96800B0EA92 /* EffectsModel.swift in Sources */,
 				A0399AC8239EC216001D3707 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
