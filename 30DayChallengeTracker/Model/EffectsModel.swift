@@ -7,15 +7,16 @@
 //
 
 import Foundation
+import Charts
 
 class EffectsModel{
     var title:String!
     var type:String!
-    var data:[Float]!
+    var data:[ChartDataEntry]!
     
     init(title: String, type: String){
         self.title = title
         self.type = type
-        data = [Float]()
+        data = [ChartDataEntry]()
     }
 }

@@ -16,12 +16,19 @@ class AddEffectsViewController: UIViewController {
     @IBOutlet var CancelButton: UIButton!
     @IBOutlet var AddButton: UIButton!
     
+    var doneSaving: (() -> ())?
+    
     @IBAction func CancelButtonClicked(_ sender: Any) {
         dismiss(animated: true)
     }
     
     @IBAction func AddButtonClicked(_ sender: Any) {
+        let model = EffectsModel(title: EffectsTitle.text ?? "No Name", type: (TypeButton?.titleForSegment(at: TypeButton!.selectedSegmentIndex))!)
+        Data.currentEffects.append(model)
         dismiss(animated: true)
+        if let doneSaving = doneSaving{
+            doneSaving()
+        }
     }
     
     override func viewDidLoad() {
