@@ -12,12 +12,10 @@ class DayModel{
     var dateString: String!
     var complete: Bool!
     
-    init(date: Date, complete: Bool){
+    init(date: Date, dateString: String, complete: Bool){
         self.date = date
-        
-        let format = DateFormatter()
-        format.dateFormat = "MM/dd"
-        dateString = format.string(from: date)
+
+        self.dateString = dateString
         
         self.complete = complete
     }

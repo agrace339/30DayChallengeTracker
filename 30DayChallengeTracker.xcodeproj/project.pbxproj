@@ -3,15 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4C302E5D02116C56EB31FBE7 /* Pods_30DayChallengeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3232C9A49ADCABBA0FAD3A5 /* Pods_30DayChallengeTracker.framework */; };
 		A0131272239C04B400D1E41F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0131271239C04B400D1E41F /* AppDelegate.swift */; };
 		A0131277239C04B400D1E41F /* _0DayChallengeTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0131275239C04B400D1E41F /* _0DayChallengeTracker.xcdatamodeld */; };
-		A013127B239C04B700D1E41F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A013127A239C04B700D1E41F /* Assets.xcassets */; };
-		A013127E239C04B700D1E41F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A013127D239C04B700D1E41F /* Preview Assets.xcassets */; };
 		A0131281239C04B700D1E41F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A013127F239C04B700D1E41F /* LaunchScreen.storyboard */; };
 		A01683A823A13DC000E0F65E /* EffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01683A723A13DC000E0F65E /* EffectsViewController.swift */; };
 		A01683AA23A143E400E0F65E /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01683A923A143E400E0F65E /* DayModel.swift */; };
@@ -24,11 +22,15 @@
 		A03D240223A2D96800B0EA92 /* EffectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D240123A2D96800B0EA92 /* EffectsModel.swift */; };
 		A03D240423A3EF8F00B0EA92 /* AddEffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D240323A3EF8F00B0EA92 /* AddEffectsViewController.swift */; };
 		A04CBC7A23A52C1C00A7E1EF /* GraphingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04CBC7923A52C1C00A7E1EF /* GraphingPageViewController.swift */; };
+		A077EA5123A6671500793557 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077EA5023A6671500793557 /* CheckInViewController.swift */; };
+		A077EA5323A96EF000793557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A013127A239C04B700D1E41F /* Assets.xcassets */; };
 		A07D0081239ECDD80033F96A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07D0080239ECDD80033F96A /* SceneDelegate.swift */; };
 		A089495E23A01E03005A8E46 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A089495A23A01E03005A8E46 /* OpenSans-SemiBold.ttf */; };
 		A089495F23A01E03005A8E46 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A089495B23A01E03005A8E46 /* OpenSans-Regular.ttf */; };
 		A089496023A01E03005A8E46 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A089495C23A01E03005A8E46 /* OpenSans-ExtraBold.ttf */; };
 		A089496123A01E03005A8E46 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A089495D23A01E03005A8E46 /* OpenSans-Bold.ttf */; };
+		A0EB96CD23AAC520004773A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB96CC23AAC520004773A5 /* SettingsViewController.swift */; };
+		A0EB96CF23AC03B1004773A5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB96CE23AC03B1004773A5 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,11 +54,14 @@
 		A03D240123A2D96800B0EA92 /* EffectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsModel.swift; sourceTree = "<group>"; };
 		A03D240323A3EF8F00B0EA92 /* AddEffectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEffectsViewController.swift; sourceTree = "<group>"; };
 		A04CBC7923A52C1C00A7E1EF /* GraphingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphingPageViewController.swift; sourceTree = "<group>"; };
+		A077EA5023A6671500793557 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		A07D0080239ECDD80033F96A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A089495A23A01E03005A8E46 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		A089495B23A01E03005A8E46 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		A089495C23A01E03005A8E46 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		A089495D23A01E03005A8E46 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		A0EB96CC23AAC520004773A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A0EB96CE23AC03B1004773A5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A3232C9A49ADCABBA0FAD3A5 /* Pods_30DayChallengeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_30DayChallengeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,11 +144,14 @@
 			isa = PBXGroup;
 			children = (
 				A0399AC1239EBF6E001D3707 /* Main.storyboard */,
-				A01683A723A13DC000E0F65E /* EffectsViewController.swift */,
-				A039328323A0391A00E8B42B /* ChallengeViewController.swift */,
 				A0399AC9239EC85B001D3707 /* HomeViewController.swift */,
+				A0EB96CC23AAC520004773A5 /* SettingsViewController.swift */,
+				A039328323A0391A00E8B42B /* ChallengeViewController.swift */,
+				A077EA5023A6671500793557 /* CheckInViewController.swift */,
+				A01683A723A13DC000E0F65E /* EffectsViewController.swift */,
 				A03D240323A3EF8F00B0EA92 /* AddEffectsViewController.swift */,
 				A04CBC7923A52C1C00A7E1EF /* GraphingPageViewController.swift */,
+				A0EB96CE23AC03B1004773A5 /* InfoViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,7 +173,6 @@
 				475E8E56E49C3CBAC24F66E7 /* Pods-30DayChallengeTracker.debug.xcconfig */,
 				27E91E6A8CA1443639B8BD81 /* Pods-30DayChallengeTracker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -229,12 +236,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A077EA5323A96EF000793557 /* Assets.xcassets in Resources */,
 				A0399AC0239EB6E9001D3707 /* Colors.xcassets in Resources */,
 				A0131281239C04B700D1E41F /* LaunchScreen.storyboard in Resources */,
 				A089496023A01E03005A8E46 /* OpenSans-ExtraBold.ttf in Resources */,
 				A089495E23A01E03005A8E46 /* OpenSans-SemiBold.ttf in Resources */,
-				A013127E239C04B700D1E41F /* Preview Assets.xcassets in Resources */,
-				A013127B239C04B700D1E41F /* Assets.xcassets in Resources */,
 				A089495F23A01E03005A8E46 /* OpenSans-Regular.ttf in Resources */,
 				A089496123A01E03005A8E46 /* OpenSans-Bold.ttf in Resources */,
 				A0399AC2239EBF6E001D3707 /* Main.storyboard in Resources */,
@@ -294,14 +300,17 @@
 				A07D0081239ECDD80033F96A /* SceneDelegate.swift in Sources */,
 				A01683A823A13DC000E0F65E /* EffectsViewController.swift in Sources */,
 				A039328423A0391A00E8B42B /* ChallengeViewController.swift in Sources */,
+				A0EB96CF23AC03B1004773A5 /* InfoViewController.swift in Sources */,
 				A0131272239C04B400D1E41F /* AppDelegate.swift in Sources */,
 				A0399ACA239EC85B001D3707 /* HomeViewController.swift in Sources */,
 				A037ADF5239D5E090042EC7A /* ChallengeModel.swift in Sources */,
 				A03D240423A3EF8F00B0EA92 /* AddEffectsViewController.swift in Sources */,
 				A01683AA23A143E400E0F65E /* DayModel.swift in Sources */,
+				A0EB96CD23AAC520004773A5 /* SettingsViewController.swift in Sources */,
 				A03D240223A2D96800B0EA92 /* EffectsModel.swift in Sources */,
 				A04CBC7A23A52C1C00A7E1EF /* GraphingPageViewController.swift in Sources */,
 				A0399AC8239EC216001D3707 /* Data.swift in Sources */,
+				A077EA5123A6671500793557 /* CheckInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"30DayChallengeTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 7GJ7M63C9Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = 30DayChallengeTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,6 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"30DayChallengeTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 7GJ7M63C9Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = 30DayChallengeTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

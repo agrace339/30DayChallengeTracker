@@ -8,7 +8,20 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITextFieldDelegate {
+    fileprivate let settingsButton: UIButton = {
+        let bt = UIButton()
+        bt.setImage(UIImage(named: "verticle-dots"), for: .normal)
+        bt.addTarget(self, action: #selector(settingBtnClicked), for: .touchUpInside)
+        return bt
+    }()
+    
+    @objc func settingBtnClicked(_ sender:UIButton!){
+        performSegue(withIdentifier: "settingPopUp", sender: nil)
+    }
+    @IBAction func infoBtnClicked(_ sender: Any) {
+        performSegue(withIdentifier: "homeToInfo", sender: nil)
+    }
     
     @IBOutlet var TitleTextField: UITextField!
     
@@ -19,7 +32,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var ChallengeInputView: UIStackView!
     @IBOutlet var startButton: UIButton!
-    @IBOutlet var ArchivedChallenges: UILabel!
     
     @IBAction func StartButton(_ sender: Any) {
         if startButton.backgroundColor == UIColor(named: "RedColor"){
@@ -38,18 +50,28 @@ class HomeViewController: UIViewController {
             startButton.setTitle(Data.currentChallenge.title, for: .normal)
             startButton.titleLabel?.font = UIFont(name: "OpenSans-ExtraBold", size: 40)
             let top_constraint = startButton.topAnchor.constraint(equalTo: CurrChalSubtitle.bottomAnchor, constant: 15)
-            
             NSLayoutConstraint.activate([top_constraint])
+            
+            startButton.addSubview(settingsButton)
+            startButton.translatesAutoresizingMaskIntoConstraints = false
+            settingsButton.translatesAutoresizingMaskIntoConstraints = false
+            settingsButton.trailingAnchor.constraint(equalTo: self.startButton.trailingAnchor, constant: -15).isActive = true
+            settingsButton.topAnchor.constraint(equalTo: self.startButton.topAnchor, constant: 15).isActive = true
+            settingsButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
+            settingsButton.heightAnchor.constraint(equalToConstant: 75).isActive = true
+            settingsButton.autoresizesSubviews = true
+            
             var date = Data.currentChallenge.startDate
-            for _ in 0...29{
+            for i in 1...30{
                 date = date!.addingTimeInterval(60.0 * 60.0 * 24.0)
-                Data.currentDays.append(DayModel(date: date!, complete: false))
+                Data.currentDays.append(DayModel(date: date!, dateString: "Day " + String(i), complete: false))
             }
             
         }
         else{
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let ChallengeViewController = storyBoard.instantiateViewController(withIdentifier: "ChallengeViewController")
+            ChallengeViewController.modalPresentationStyle = .fullScreen
             self.present(ChallengeViewController, animated: true, completion: nil)
             
         }
@@ -58,7 +80,28 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startButton.layer.cornerRadius = 20
-        ArchivedChallenges.layer.cornerRadius = 20
+        startButton.layer.cornerRadius = 15
+        TitleTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.TitleTextField.endEditing(true)
+        return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.TitleTextField.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "settingPopUp"{
+            let popup = segue.destination as! SettingsViewController
+            popup.doneSaving = { [weak self] in
+                self!.startButton.setTitle(Data.currentChallenge.title, for: .normal)
+            }
+        }
+        else if segue.identifier == "homeToInfo"{
+            let popup = segue.destination as! InfoViewController
+            popup.message = "Type determines what kind of data you want to track. Binary means that the data falls into to catagories. Either it happened or it didn't. Numeric means that the data is a number, like 15 minutes of meditations."
+        }
     }
 }

@@ -20,10 +20,16 @@ class EffectsViewController: UIViewController, UITableViewDataSource, UITableVie
         return tv
     }()
     
+    @IBAction func homeBtn(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    @IBAction func infoBtnClicked(_ sender: Any) {
+        performSegue(withIdentifier: "effectsToInfo", sender: nil)
+    }
+    
+    
     @IBOutlet var ChallengeName: UILabel!
     
-    @IBAction func addEffectsClicked(_ sender: Any) {
-    }
     
     @IBOutlet var EffectsHeader: UIStackView!
     
@@ -35,9 +41,9 @@ class EffectsViewController: UIViewController, UITableViewDataSource, UITableVie
         self.view.addSubview(effectsTableView)
         effectsTableView.backgroundColor = UIColor(named: "AppBackgroundColor")
         effectsTableView.topAnchor.constraint(equalTo: EffectsHeader.bottomAnchor, constant: 15).isActive = true
-        effectsTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 15).isActive = true
-        effectsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 30).isActive = true
-        effectsTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -15).isActive = true
+        effectsTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
+        effectsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
+        effectsTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
         //When figure out footer spacing
         //effectsTableView.separatorColor = UIColor(named: "AppBackgroundColor")
         effectsTableView.delegate = self
@@ -56,6 +62,10 @@ class EffectsViewController: UIViewController, UITableViewDataSource, UITableVie
             let graphview = segue.destination as! GraphingPageViewController
             graphview.effectIndex = lastIndex
         }
+        else if segue.identifier == "effectsToInfo"{
+            let popup = segue.destination as! InfoViewController
+            popup.message = "Effects are the things you want to track in addition to your 30 day challenge. For example, if you want to workout for 30 days, you might want to track how much weight you can benchpress or how much energy you have per day."
+        }
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,6 +78,7 @@ class EffectsViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.textLabel?.font = UIFont(name: "OpenSans-Regular", size: 18)
         //cell.layer.cornerRadius = 10
         cell.backgroundColor = UIColor(named: "BackgroundColor")
+        cell.selectionStyle = .none
         cell.textLabel?.text = Data.currentEffects[indexPath.row].title
         return cell
         

@@ -10,8 +10,10 @@ import UIKit
 import Charts
 
 class GraphingPageViewController: UIViewController, UITextFieldDelegate {
-
+    
     var effectIndex: Int = 0
+    
+    var effectLine = LineChartDataSet()
     
     @IBOutlet var EffectName: UILabel!
     @IBOutlet var AddButton: UIButton!
@@ -37,12 +39,22 @@ class GraphingPageViewController: UIViewController, UITextFieldDelegate {
     }()
     
     @IBAction func AddButtonClicked(_ sender: Any) {
+        let x = Double(Data.updateCurrentDay())
+        let data = ChartDataEntry()
+        data.x = x
         if Data.currentEffects[effectIndex].type == "Binary"{
-            Data.currentEffects[effectIndex].data.append(Float(segmentedControl.selectedSegmentIndex))
+            data.y = Double(segmentedControl.selectedSegmentIndex)
         }
         else{
-            Data.currentEffects[effectIndex].data.append(NumberFormatter().number(from: numInput.text!)!.floatValue)
+            data.y = NumberFormatter().number(from: numInput.text!)!.doubleValue
         }
+        
+        if Data.currentEffects[effectIndex].data.last?.x == x{
+            _ = Data.currentEffects[effectIndex].data.popLast()
+        }
+        Data.currentEffects[effectIndex].data.append(data)
+        
+        updateGraph()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,19 +69,58 @@ class GraphingPageViewController: UIViewController, UITextFieldDelegate {
             segmentedControl.trailingAnchor.constraint(equalTo: AddButton.leadingAnchor, constant: -15).isActive = true
         }
         else{
-           InputView.addSubview(numInput)
+            InputView.addSubview(numInput)
             numInput.topAnchor.constraint(equalTo: InputView.topAnchor, constant: 15).isActive = true
             numInput.leadingAnchor.constraint(equalTo: InputView.leadingAnchor, constant: 15).isActive = true
             numInput.bottomAnchor.constraint(equalTo: InputView.bottomAnchor, constant: -15).isActive = true
             numInput.trailingAnchor.constraint(equalTo: AddButton.leadingAnchor, constant: -15).isActive = true
+            numInput.keyboardType = .decimalPad
             numInput.delegate = self
         }
+        
+        Graph.borderColor = UIColor(named: "TextColor")!
+        updateGraph()
+        
         
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
     {
-      let allowedCharacters = CharacterSet.decimalDigits
-      let characterSet = CharacterSet(charactersIn: string)
-      return allowedCharacters.isSuperset(of: characterSet)
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet(charactersIn: string)
+        let boolIsNumber = allowedCharacters.isSuperset(of: characterSet)
+        if boolIsNumber == true {
+            return true
+        } else {
+            if string == "." {
+                let countdots = textField.text!.components(separatedBy:".").count - 1
+                if countdots == 0 {
+                    return true
+                } else {
+                    if countdots > 0 && string == "." {
+                        return false
+                    } else {
+                        return true
+                    }
+                }
+            } else {
+                return false
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.numInput.endEditing(true)
+        return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.numInput.endEditing(true)
+    }
+    
+    func updateGraph(){
+        effectLine = LineChartDataSet(entries: Data.currentEffects[effectIndex].data, label: Data.currentEffects[effectIndex].title)
+        effectLine.colors = [UIColor(named: "RedColor")!]
+        let data = LineChartData()
+        data.addDataSet(effectLine)
+        Graph.data = data
     }
 }

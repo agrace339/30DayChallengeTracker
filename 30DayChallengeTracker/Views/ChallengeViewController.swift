@@ -13,6 +13,7 @@ protocol CounterDelegate{
 }
 
 class ChallengeViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    var lastIndex = 0
     
     func requestReload(counter:Int) {
         Data.completedDays = counter
@@ -30,6 +31,9 @@ class ChallengeViewController: UIViewController, UICollectionViewDelegateFlowLay
         return cv
     }()
 
+    @IBAction func backBtnClicked(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     @IBOutlet var ChallengeName: UILabel!
     @IBOutlet var CountDaysLabel: UILabel!
     
@@ -45,7 +49,6 @@ class ChallengeViewController: UIViewController, UICollectionViewDelegateFlowLay
         
         dayCollectionView.delegate = self
         dayCollectionView.dataSource = self
-        
         
         CountDaysLabel.text = String(Data.completedDays) + "/30 Days Complete!"
     }
@@ -76,21 +79,44 @@ class ChallengeViewController: UIViewController, UICollectionViewDelegateFlowLay
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! DayCell
-        if cell.backgroundColor == UIColor(named: "BackgroundColor"){
-            cell.backgroundColor = UIColor(named: "BlueColor")
-            cell.date.textColor = UIColor(named: "BackgroundColor")
-            Data.currentDays[indexPath.row].complete = true
-            Data.completedDays += 1
-            CountDaysLabel.text = String(Data.completedDays) + "/30 Days Complete!"
+        let x = Data.updateCurrentDay()
+        if indexPath.row > x{
+            //TODO - Notify user that they can't check in in the future
+            print("Future Day")
         }
-        
         else{
-            cell.backgroundColor = UIColor(named: "BackgroundColor")
-            cell.date.textColor = UIColor(named: "TextColor")
-            Data.currentDays[indexPath.row].complete = false
-            Data.completedDays -= 1
-            CountDaysLabel.text = String(Data.completedDays) + "/30 Days Complete!"
+            if Data.currentChallenge.challengeType == "Numeric"{
+                lastIndex = indexPath.row
+                performSegue(withIdentifier: "checkin", sender: nil)
+            }
+                
+            else{
+                let cell = collectionView.cellForItem(at: indexPath) as! DayCell
+                if cell.backgroundColor == UIColor(named: "BackgroundColor"){
+                    cell.backgroundColor = UIColor(named: "BlueColor")
+                    cell.date.textColor = UIColor(named: "BackgroundColor")
+                    Data.currentDays[indexPath.row].complete = true
+                    Data.completedDays += 1
+                    CountDaysLabel.text = String(Data.completedDays) + "/30 Days Complete!"
+                }
+                
+                else{
+                    cell.backgroundColor = UIColor(named: "BackgroundColor")
+                    cell.date.textColor = UIColor(named: "TextColor")
+                    Data.currentDays[indexPath.row].complete = false
+                    Data.completedDays -= 1
+                    CountDaysLabel.text = String(Data.completedDays) + "/30 Days Complete!"
+                }
+            }
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "checkin"{
+            let popup = segue.destination as! CheckInViewController
+            popup.dayIndex = lastIndex
+            popup.doneSaving = { [weak self] in
+                self?.dayCollectionView.reloadData()
+            }
         }
     }
 }
